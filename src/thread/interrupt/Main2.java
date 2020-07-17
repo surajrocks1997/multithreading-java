@@ -2,13 +2,9 @@ package thread.interrupt;
 
 import java.math.BigInteger;
 
-public class Main {
+public class Main2 {
 
 	public static void main(String[] args) {
-//		Thread thread = new Thread(new BlockingTask());
-//		thread.start();
-//		thread.interrupt();
-		
 		Thread thread = new Thread(new LongComputationTask(new BigInteger("20000"), new BigInteger("1000000")));
 		
 		thread.start();
@@ -45,17 +41,4 @@ public class Main {
 			return result;
 		}
 	}
-	
-//	private static class BlockingTask implements Runnable{
-//
-//		@Override
-//		public void run() {
-//			// TODO Auto-generated method stub
-//			try {
-//				Thread.sleep(50000000);
-//			} catch (InterruptedException e) {
-//				System.out.println("Exiting blocking thread.");
-//			}
-//		}
-//	}
 }
