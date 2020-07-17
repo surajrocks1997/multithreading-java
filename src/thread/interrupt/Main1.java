@@ -18,6 +18,7 @@ public class Main1 {
 				Thread.sleep(50000000);
 			} catch (InterruptedException e) {
 				System.out.println("Exiting blocking thread.");
+				return;
 			}
 		}
 	}
